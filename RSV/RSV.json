@@ -5,24 +5,95 @@
         "name": {
             "type": "string"
         },
+        "vaults_kristianRecovery_name": {
+            "type": "string"
+        },
+        "backupPolicies_KristianPolicy_name": {
+            "type": "string"
+        },
+        "backupPolicies_HourlyLogBackup_name": {
+            "type": "string"
+        },
+        "backupPolicies_DefaultPolicy_name": {
+            "type": "string"
+        },
+        "replicationAlertSettings_defaultAlertSetting_name": {
+            "type": "string"
+        },
         "location": {
             "type": "string"
         },
-        "apiVersion": {
-            "type": "string"
-        }
     },
     "resources": [
         {
-            "apiVersion": "[parameters('apiVersion')]",
-            "name": "[parameters('name')]",
-            "location": "[parameters('location')]",
             "type": "Microsoft.RecoveryServices/vaults",
             "sku": {
                 "name": "RS0",
                 "tier": "Standard"
             },
-            "properties": {}
+            "name": "[parameters('name')]",
+            "apiVersion": "2018-01-10",
+            "location": "[parameters('location')]",
+            "scale": null,
+            "properties": {},
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourcegroups/KristianRG/providers/Microsoft.RecoveryServices/vaults/kristianRecovery/backupPolicies/KristianPolicy'.",
+            "type": "Microsoft.RecoveryServices/vaults/backupPolicies",
+            "name": "[concat(parameters('vaults_kristianRecovery_name'), '/', parameters('backupPolicies_KristianPolicy_name'))]",
+            "apiVersion": "2016-12-01",
+            "scale": null,
+            "properties": {
+                "backupManagementType": "AzureIaasVM",
+                "protectedItemsCount": 0
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_kristianRecovery_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourcegroups/KristianRG/providers/Microsoft.RecoveryServices/vaults/kristianRecovery/backupPolicies/HourlyLogBackup'.",
+            "type": "Microsoft.RecoveryServices/vaults/backupPolicies",
+            "name": "[concat(parameters('vaults_kristianRecovery_name'), '/', parameters('backupPolicies_HourlyLogBackup_name'))]",
+            "apiVersion": "2016-12-01",
+            "scale": null,
+            "properties": {
+                "backupManagementType": "AzureWorkload",
+                "protectedItemsCount": 0
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_kristianRecovery_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourcegroups/KristianRG/providers/Microsoft.RecoveryServices/vaults/kristianRecovery/backupPolicies/DefaultPolicy'.",
+            "type": "Microsoft.RecoveryServices/vaults/backupPolicies",
+            "name": "[concat(parameters('vaults_kristianRecovery_name'), '/', parameters('backupPolicies_DefaultPolicy_name'))]",
+            "apiVersion": "2016-12-01",
+            "scale": null,
+            "properties": {
+                "backupManagementType": "AzureIaasVM",
+                "protectedItemsCount": 0
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_kristianRecovery_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/Subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourceGroups/KristianRG/providers/Microsoft.RecoveryServices/vaults/kristianRecovery/replicationAlertSettings/defaultAlertSetting'.",
+            "type": "Microsoft.RecoveryServices/vaults/replicationAlertSettings",
+            "name": "[concat(parameters('vaults_kristianRecovery_name'), '/', parameters('replicationAlertSettings_defaultAlertSetting_name'))]",
+            "apiVersion": "2018-01-10",
+            "scale": null,
+            "properties": {
+                "sendToOwners": "DoNotSend",
+                "customEmailAddresses": [],
+                "locale": ""
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_kristianRecovery_name'))]"
+            ]
         }
     ]
 }

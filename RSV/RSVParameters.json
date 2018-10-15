@@ -8,8 +8,20 @@
         "location": {
             "value": "westeurope"
         },
-        "apiVersion": {
-            "value": "2016-06-01"
+        "vaults_kristianRecovery_name": {
+            "value": null
+        },
+        "backupPolicies_DefaultPolicy_name": {
+            "value": null
+        },
+        "backupPolicies_KristianPolicy_name": {
+            "value": null
+        },
+        "backupPolicies_HourlyLogBackup_name": {
+            "value": null
+        },
+        "replicationAlertSettings_defaultAlertSetting_name": {
+            "value": null
         }
     }
 }
