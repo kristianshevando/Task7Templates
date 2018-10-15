@@ -48,9 +48,9 @@
                 "backupManagementType": "AzureIaasVM",
                 "protectedItemsCount": 0
             },
-            "dependsOn": [
-                "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_kristianRecovery_name'))]"
-            ]
+            // "dependsOn": [
+            //     "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_kristianRecovery_name'))]"
+            // ]
         },
         {
             "comments": "Generalized from resource: '/subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourcegroups/KristianRG/providers/Microsoft.RecoveryServices/vaults/kristianRecovery/backupPolicies/HourlyLogBackup'.",
@@ -62,9 +62,9 @@
                 "backupManagementType": "AzureWorkload",
                 "protectedItemsCount": 0
             },
-            "dependsOn": [
-                "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_kristianRecovery_name'))]"
-            ]
+            // "dependsOn": [
+            //     "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_kristianRecovery_name'))]"
+            // ]
         },
         {
             "comments": "Generalized from resource: '/subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourcegroups/KristianRG/providers/Microsoft.RecoveryServices/vaults/kristianRecovery/backupPolicies/DefaultPolicy'.",
@@ -76,9 +76,9 @@
                 "backupManagementType": "AzureIaasVM",
                 "protectedItemsCount": 0
             },
-            "dependsOn": [
-                "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_kristianRecovery_name'))]"
-            ]
+            // "dependsOn": [
+            //     "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_kristianRecovery_name'))]"
+            // ]
         },
         {
             "comments": "Generalized from resource: '/Subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourceGroups/KristianRG/providers/Microsoft.RecoveryServices/vaults/kristianRecovery/replicationAlertSettings/defaultAlertSetting'.",
@@ -91,9 +91,9 @@
                 "customEmailAddresses": [],
                 "locale": ""
             },
-            "dependsOn": [
-                "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_kristianRecovery_name'))]"
-            ]
+            // "dependsOn": [
+            //     "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_kristianRecovery_name'))]"
+            // ]
         }
     ]
 }
