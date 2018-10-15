@@ -4,6 +4,7 @@
     "parameters": {
       "keyVaultName": {
         "type": "string",
+        "defaultValue": "kristianVault"
       },
       "tenantId": {
         "type": "string",
