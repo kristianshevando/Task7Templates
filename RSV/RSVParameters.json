@@ -8,20 +8,23 @@
         "location": {
             "value": "westeurope"
         },
-        "vaults_kristianRecovery_name": {
-            "value": "kristianRecovery"
-        },
-        "backupPolicies_DefaultPolicy_name": {
-            "value": "defaultPolicy"
-        },
-        "backupPolicies_KristianPolicy_name": {
-            "value": "kristianPolicy"
-        },
-        "backupPolicies_HourlyLogBackup_name": {
-            "value": "hourlyLogBackup"
-        },
-        "replicationAlertSettings_defaultAlertSetting_name": {
-            "value": "defaultAlert"
+        "apiVersion": {
+            "value": "2016-06-01"
         }
+        // "vaults_kristianRecovery_name": {
+        //     "value": "kristianRecovery"
+        // },
+        // "backupPolicies_DefaultPolicy_name": {
+        //     "value": "defaultPolicy"
+        // },
+        // "backupPolicies_KristianPolicy_name": {
+        //     "value": "kristianPolicy"
+        // },
+        // "backupPolicies_HourlyLogBackup_name": {
+        //     "value": "hourlyLogBackup"
+        // },
+        // "replicationAlertSettings_defaultAlertSetting_name": {
+        //     "value": "defaultAlert"
+        // }
     }
 }
