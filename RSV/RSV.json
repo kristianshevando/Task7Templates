@@ -39,7 +39,6 @@
             "dependsOn": []
         },
         {
-            "comments": "Generalized from resource: '/subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourcegroups/KristianRG/providers/Microsoft.RecoveryServices/vaults/kristianRecovery/backupPolicies/KristianPolicy'.",
             "type": "Microsoft.RecoveryServices/vaults/backupPolicies",
             "name": "[concat(parameters('vaults_kristianRecovery_name'), '/', parameters('backupPolicies_KristianPolicy_name'))]",
             "apiVersion": "2016-12-01",
@@ -48,12 +47,11 @@
                 "backupManagementType": "AzureIaasVM",
                 "protectedItemsCount": 0
             },
-            // "dependsOn": [
-            //     "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_kristianRecovery_name'))]"
-            // ]
+            "dependsOn": [
+                "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_kristianRecovery_name'))]"
+            ]
         },
         {
-            "comments": "Generalized from resource: '/subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourcegroups/KristianRG/providers/Microsoft.RecoveryServices/vaults/kristianRecovery/backupPolicies/HourlyLogBackup'.",
             "type": "Microsoft.RecoveryServices/vaults/backupPolicies",
             "name": "[concat(parameters('vaults_kristianRecovery_name'), '/', parameters('backupPolicies_HourlyLogBackup_name'))]",
             "apiVersion": "2016-12-01",
@@ -62,12 +60,11 @@
                 "backupManagementType": "AzureWorkload",
                 "protectedItemsCount": 0
             },
-            // "dependsOn": [
-            //     "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_kristianRecovery_name'))]"
-            // ]
+            "dependsOn": [
+                "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_kristianRecovery_name'))]"
+            ]
         },
         {
-            "comments": "Generalized from resource: '/subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourcegroups/KristianRG/providers/Microsoft.RecoveryServices/vaults/kristianRecovery/backupPolicies/DefaultPolicy'.",
             "type": "Microsoft.RecoveryServices/vaults/backupPolicies",
             "name": "[concat(parameters('vaults_kristianRecovery_name'), '/', parameters('backupPolicies_DefaultPolicy_name'))]",
             "apiVersion": "2016-12-01",
@@ -76,12 +73,11 @@
                 "backupManagementType": "AzureIaasVM",
                 "protectedItemsCount": 0
             },
-            // "dependsOn": [
-            //     "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_kristianRecovery_name'))]"
-            // ]
+            "dependsOn": [
+                "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_kristianRecovery_name'))]"
+            ]
         },
         {
-            "comments": "Generalized from resource: '/Subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourceGroups/KristianRG/providers/Microsoft.RecoveryServices/vaults/kristianRecovery/replicationAlertSettings/defaultAlertSetting'.",
             "type": "Microsoft.RecoveryServices/vaults/replicationAlertSettings",
             "name": "[concat(parameters('vaults_kristianRecovery_name'), '/', parameters('replicationAlertSettings_defaultAlertSetting_name'))]",
             "apiVersion": "2018-01-10",
@@ -91,9 +87,9 @@
                 "customEmailAddresses": [],
                 "locale": ""
             },
-            // "dependsOn": [
-            //     "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_kristianRecovery_name'))]"
-            // ]
+            "dependsOn": [
+                "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_kristianRecovery_name'))]"
+            ]
         }
     ]
 }
