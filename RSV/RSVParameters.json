@@ -9,19 +9,19 @@
             "value": "westeurope"
         },
         "vaults_kristianRecovery_name": {
-            "value": null
+            "value": "kristianRecovery"
         },
         "backupPolicies_DefaultPolicy_name": {
-            "value": null
+            "value": "defaultPolicy"
         },
         "backupPolicies_KristianPolicy_name": {
-            "value": null
+            "value": "kristianPolicy"
         },
         "backupPolicies_HourlyLogBackup_name": {
-            "value": null
+            "value": "hourlyLogBackup"
         },
         "replicationAlertSettings_defaultAlertSetting_name": {
-            "value": null
+            "value": "defaultAlert"
         }
     }
 }
