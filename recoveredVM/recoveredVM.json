@@ -166,18 +166,13 @@
                 },
                 "storageProfile": {
                     "osDisk": {
-                        "name": "WindaAzure16",
+                        "name": "OSRecovered",
                         "caching": "ReadWrite",
                         "createOption": "Attach",
                         "vhd":{
                             "uri": "https://kristiansa2.blob.core.windows.net/kristianvm-07b629b03c5f4d5c97571b23606d80b3/kristianvm-osdisk-20181016-123930.vhd"
-                        }
-                    },
-                    "imageReference": {
-                        "publisher": "MicrosoftWindowsServer",
-                        "offer": "WindowsServer",
-                        "sku": "2016-Datacenter",
-                        "version": "latest"
+                        },
+                        "osType": "Windows"
                     }
                 },
                 "networkProfile": {
