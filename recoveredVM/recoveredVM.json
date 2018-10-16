@@ -171,8 +171,7 @@
                         "createOption": "Attach",
                         "vhd":{
                             "uri": "https://kristiansa2.blob.core.windows.net/kristianvm-07b629b03c5f4d5c97571b23606d80b3/kristianvm-osdisk-20181016-123930.vhd"
-                        },
-                        "osType": "Windows"
+                        }
                     }
                 },
                 "networkProfile": {
@@ -181,15 +180,6 @@
                             "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaceName'))]"
                         }
                     ]
-                },
-                "osProfile": {
-                    "computerName": "[parameters('virtualMachineName')]",
-                    "adminUsername": "[parameters('adminUsername')]",
-                    "adminPassword": "[parameters('adminPassword')]",
-                    "windowsConfiguration": {
-                        "enableAutomaticUpdates": true,
-                        "provisionVmAgent": true
-                    }
                 },
                 "diagnosticsProfile": {
                     "bootDiagnostics": {
