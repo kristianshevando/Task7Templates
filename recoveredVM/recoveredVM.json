@@ -57,7 +57,7 @@
             "type": "string"
         },
         "adminPassword": {
-            "type": "secureString"
+            "type": "securestring"
         },
         "diagnosticsStorageAccountName": {
             "type": "string"
@@ -154,19 +154,6 @@
         {
             "type": "Microsoft.Compute/disks",
             "apiVersion": "2017-03-30",
-            "name": "OSdisk",
-            "location": "[parameters('location')]",
-            "properties": {
-                "creationData": {
-                    "createOption": "Import",
-                    "sourceUri": "https://kristiansa2.blob.core.windows.net/kristianvm-07b629b03c5f4d5c97571b23606d80b3/kristianvm-osdisk-20181016-123930.vhd"
-                },
-                "osType": "Windows"
-            }
-        },
-        {
-            "type": "Microsoft.Compute/disks",
-            "apiVersion": "2017-03-30",
             "name": "Datadisk",
             "location": "[parameters('location')]",
             "properties": {
@@ -192,10 +179,11 @@
                 },
                 "storageProfile": {
                     "osDisk": {
+                        "name": "WindaAzure16",
                         "caching": "ReadWrite",
                         "createOption": "Attach",
-                        "managedDisk": {
-                            "storageAccountType": "[parameters('osDiskType')]"
+                        "vhd":{
+                            "uri": "https://kristiansa2.blob.core.windows.net/kristianvm-07b629b03c5f4d5c97571b23606d80b3/kristianvm-osdisk-20181016-123930.vhd"
                         }
                     },
                     "imageReference": {
@@ -203,15 +191,7 @@
                         "offer": "WindowsServer",
                         "sku": "2016-Datacenter",
                         "version": "latest"
-                    },
-                    "dataDisks": [
-                        {
-                            "name": "Data",
-                            "diskSizeGB": 128,
-                            "lun": 0,
-                            "createOption": "Attach"
-                        }
-                    ]
+                    }
                 },
                 "networkProfile": {
                     "networkInterfaces": [
