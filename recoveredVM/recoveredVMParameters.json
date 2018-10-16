@@ -6,15 +6,15 @@
             "value": "westeurope"
         },
         "networkInterfaceName": {
-            "value": "kristianvm654"
+            "value": "kristianvmrec"
         },
         "networkSecurityGroupName": {
-            "value": "kristianVM-nsg"
+            "value": "kristianVMrecnsg"
         },
         "networkSecurityGroupRules": {
             "value": [
                 {
-                    "name": "RDPIn",
+                    "name": "RDPInbound",
                     "properties": {
                         "priority": 420,
                         "protocol": "TCP",
@@ -27,7 +27,7 @@
                     }
                 },
                 {
-                    "name": "RDPOut",
+                    "name": "RDPOutbound",
                     "properties": {
                         "priority": 430,
                         "protocol": "TCP",
@@ -42,7 +42,7 @@
             ]
         },
         "virtualNetworkName": {
-            "value": "KristianRG-vnet"
+            "value": "KristianRGvnet"
         },
         "addressPrefix": {
             "value": "10.0.0.0/24"
@@ -54,7 +54,7 @@
             "value": "10.0.0.0/24"
         },
         "publicIpAddressName": {
-            "value": "kristianVM-ip"
+            "value": "kristianVMip"
         },
         "publicIpAddressType": {
             "value": "Dynamic"
@@ -80,7 +80,7 @@
             }
         },
         "diagnosticsStorageAccountName": {
-            "value": "kristiandiag"
+            "value": "kristiandiagnostics"
         },
         "diagnosticsStorageAccountType": {
             "value": "Standard_LRS"
