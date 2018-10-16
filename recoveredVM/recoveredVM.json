@@ -62,9 +62,6 @@
         "diagnosticsStorageAccountName": {
             "type": "string"
         },
-        "diagnosticsStorageAccountId": {
-            "type": "string"
-        },
         "diagnosticsStorageAccountType": {
             "type": "string"
         },
@@ -228,7 +225,7 @@
                     "dataDisks": [
                         {
                             "name": "Data",
-                            "diskSizeGB": "128",
+                            "diskSizeGB": 128,
                             "lun": 0,
                             "createOption": "Attach"
                         }
