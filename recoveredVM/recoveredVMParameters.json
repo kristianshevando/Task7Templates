@@ -80,7 +80,7 @@
         "adminPassword": {
             "reference":  {
                 "keyVault":  {
-                  "id":  "/subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourceGroups/KristianRGRestored/providers/Microsoft.KeyVault/vaults/kristianRecoveredVault"
+                  "id":  "/subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourceGroups/KristianRG/providers/Microsoft.KeyVault/vaults/kristianRecoveredVault"
                   },
                 "secretName":  "kristianVMPassword"
             }
@@ -88,11 +88,11 @@
         "diagnosticsStorageAccountName": {
             "value": "kristiandiag"
         },
-        "diagnosticsStorageAccountId": {
-            "value": "Microsoft.Storage/storageAccounts/kristiandiag"
-        },
         "diagnosticsStorageAccountType": {
             "value": "Standard_LRS"
+        },
+        "diagnosticsStorageAccountKind": {
+            "value": "Storage"
         }
     }
 }
