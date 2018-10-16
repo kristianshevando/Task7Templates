@@ -93,9 +93,6 @@
         },
         "diagnosticsStorageAccountType": {
             "value": "Standard_LRS"
-        },
-        "diagnosticsStorageAccountKind": {
-            "value": "Storage"
         }
     }
 }
