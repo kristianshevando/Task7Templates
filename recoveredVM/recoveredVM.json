@@ -140,18 +140,6 @@
             "tags": {}
         },
         {
-            "type": "Microsoft.Compute/disks",
-            "apiVersion": "2017-03-30",
-            "name": "Datadisk",
-            "location": "[parameters('location')]",
-            "properties": {
-                "creationData": {
-                    "createOption": "Import",
-                    "sourceUri": "https://kristiansa2.blob.core.windows.net/kristianvm-07b629b03c5f4d5c97571b23606d80b3/kristianvm-datadisk-000-20181016-123930.vhd"
-                }
-            }
-        },
-        {
             "name": "[parameters('virtualMachineName')]",
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "2018-04-01",
@@ -173,7 +161,17 @@
                             "uri": "https://kristiansa2.blob.core.windows.net/kristianvm-07b629b03c5f4d5c97571b23606d80b3/kristianvm-osdisk-20181016-123930.vhd"
                         },
                         "osType":"Windows"
-                    }
+                    },
+                    "dataDisks":[
+                        {
+                            "name": "Datadisk",
+                            "caching": "ReadWrite",
+                            "createOption": "Attach",
+                            "vhd":{
+                                "uri": "https://kristiansa2.blob.core.windows.net/kristianvm-07b629b03c5f4d5c97571b23606d80b3/kristianvm-datadisk-000-20181016-123930.vhd"
+                            }
+                        }
+                    ]
                 },
                 "networkProfile": {
                     "networkInterfaces": [
