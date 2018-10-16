@@ -38,18 +38,18 @@
         "virtualMachineName": {
             "type": "string"
         },
-        "virtualMachineRG": {
-            "type": "string"
-        },
-        "osDiskType": {
-            "type": "string"
-        },
-        "dataDisks": {
-            "type": "array"
-        },
-        "dataDiskResources": {
-            "type": "array"
-        },
+        // "virtualMachineRG": {
+        //     "type": "string"
+        // },
+        // "osDiskType": {
+        //     "type": "string"
+        // },
+        // "dataDisks": {
+        //     "type": "array"
+        // },
+        // "dataDiskResources": {
+        //     "type": "array"
+        // },
         "virtualMachineSize": {
             "type": "string"
         },

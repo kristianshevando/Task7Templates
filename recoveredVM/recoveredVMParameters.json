@@ -65,12 +65,6 @@
         "virtualMachineName": {
             "value": "kristianRecoveredVM"
         },
-        "virtualMachineRG": {
-            "value": "KristianRG"
-        },
-        "osDiskType": {
-            "value": "Premium_LRS"
-        },
         "virtualMachineSize": {
             "value": "Standard_D2s_v3"
         },
